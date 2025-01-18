@@ -1,0 +1,59 @@
+import sqlite3 as sq
+from random import *
+conn1 = sq.connect('test_db.sqlite')
+
+cursor1 = conn1.cursor()
+cursor1.execute('''CREATE TABLE IF NOT EXISTS workers (
+                   id INTEGER NOT NULL,
+                   name TEXT NOT NULL,
+                   age INTEGER NOT NULL,
+                   work TEXT NOT NULL,
+                   phone INTEGER NOT NULL);''')
+
+cursor1.execute('''CREATE TABLE IF NOT EXISTS food ( 
+                   id INTEGER NOT NULL
+                   name TEXT NOT NULL,
+                   price INTEGER NOT NULL,
+                   count INTEGER NOT NULL);''')
+
+
+cursor1.execute('''CREATE TABLE IF NOT EXISTS suppliers(
+                   id INTEGER NOT NUUL,
+                   phone INTEGER NOT NULL,
+                   name TEXT NOT NULL,
+                   product TEXT NOT NULL);''')
+
+
+name = [
+    "Игорь","Venom","Максим", "Алексей","Сидорович"
+]
+surname = [
+    "Игорьевич","Venomovich","Максимович","Алексеивич","Сидоровичев"
+]
+job = [
+    "повар","шевповар","официант","кассир","повар"
+]
+company = [
+    "игорьная","добрыня","веном","эщкерембус","бахмутовная"
+]
+postavky = [
+    "мороженое","соуси","мясо","кортошка","тесто","напитки","оборудование","услуги"
+]
+food = [
+    "мороженое","пельмени","бигбигпельмени","напитки","вареники"
+]
+vrites = [
+    "сыр","куриноемясо","говяжъемясо","веном","вегаторианскоемясо","ванильное","большое","мини","сырныйсоус","клубничныйсоус"
+]
+for i in range(10):
+      ad = []
+      ad.append(i)
+      combo = food[randint(0,4)] +vrites[randint(0,9)]
+      ad.append[(combo)]
+      ad.append[(randint(100,500)]
+      ad.append[(randint(100,1000))
+
+     # cursor1.execute('''INSERT IN TABLE food(id,name,price,count) VALUES (?,?,?,?,?)''',ad)
+     print(ad)
+                                             
+                                             
