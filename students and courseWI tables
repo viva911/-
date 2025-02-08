@@ -1,0 +1,14 @@
+from tkinter import *
+import sqlite3 as sq
+conn = sq.connect('test_db.sqlite')
+cursor = conn.cursor()
+cursor.execute('''CREATE TABLE IF NOT EXISTS students(
+               name TEXT NOT NULL,
+               id INTEGER NOT NULL,
+               course TEXT NOT NULL,
+               age INTEGER NOT NULl);''')
+cursor.execute('''CREATE TABLE IF NOT EXISTS courses(
+               name TEXT NOT NULL,
+               id INTEGER NOT NULL,
+               info TEXT NOT NULL,
+               count_students INTEGER NOT NULl);''')
